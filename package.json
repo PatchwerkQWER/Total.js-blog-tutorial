@@ -1,0 +1,14 @@
+{
+  "name": "totaljs-blog-tutorial",
+  "version": "1.0.0",
+  "description": "Simple blog tutorial based on Total.js framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Granec",
+  "license": "MIT",
+  "dependencies": {
+    "total.js": "^3.1.0"
+  }
+}
