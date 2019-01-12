@@ -63,6 +63,7 @@ header{
 }
 .blog-title{
 	font-size: 2.5em;
+	line-height: 1em;
 	margin-top: 0;
 	text-align: center;
 }
@@ -171,7 +172,23 @@ textarea{
 	margin-top: 5px;
 }
 .comment-content{
+	word-wrap: break-word;
 }
+
+/* Admin */
+.post {
+	margin-left: 0;
+}
+.post textarea {
+	width: 100%;
+}
+
+/* Footer */
+.link {
+	display: inline;
+	margin: 10px 15px;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 768px){
 	.blog-post{

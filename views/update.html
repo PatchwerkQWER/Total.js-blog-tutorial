@@ -1,0 +1,22 @@
+<div class="container">
+
+	<div class="section">
+		<div class="form">
+			<h2 class="sub-title">Update post</h2>
+			<form class="post" action="/post/update/" method="post">
+				<div class="field">
+					<label for="name">Title:</label>
+					@{textarea('title', { required: true, maxlength: 128 })}
+				</div>
+				<div class="field">
+					<label for="msg">Content:</label>
+					@{textarea('content', { required: true, rows: 20 })}
+				</div>
+				<div class="field">
+					@{text('id', { required: true, style: 'display:none;' })}
+					<input type="submit" value="Update post">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

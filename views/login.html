@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="section">
+		<div class="form">
+			<h2 class="sub-title">Administration</h2>
+			<form action="/login/" method="post">
+				<div class="field">
+					<label for="name">Login:</label>
+					@{text('login', { required: true })}
+				</div>
+				<div class="field">
+					<label for="msg">Password:</label>
+					@{password('password', { required: true })}
+				</div>
+				<div class="field">
+					<input type="submit" value="Send message">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

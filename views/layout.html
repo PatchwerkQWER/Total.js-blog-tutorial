@@ -10,10 +10,36 @@
 </head>
 <body>
 	<header>
-		<h1 class="logo">Total.js blog</h1>
+		<h1 class="logo"><a href="@{hostname}">Total.js blog</a></h1>
 	</header>
 
 	@{body}
 
+	<footer>
+		<div class="container">
+			<div class="section">
+				@{if !user}
+				<h5 class="link">
+					<a href="/login/">Login</a>
+				</h5>
+				@{else}
+				<h5 class="link">
+					<a href="/admin/">New post</a>
+				</h5>
+				@{if model && model.id}
+				<h5 class="link">
+					<a href="/admin?id=@{model.id}">Update post</a>
+				</h5>
+				<h5 class="link">
+					<a href="/post/remove/@{model.id}/">Remove post</a>
+				</h5>
+				@{fi}
+				<h5 class="link">
+					<a href="/logout/">Logout</a>
+				</h5>
+				@{fi}
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

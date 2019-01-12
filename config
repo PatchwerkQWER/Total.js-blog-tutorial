@@ -1,10 +1,7 @@
-name                            : Total.js - Simple blog tutorial
+name                            : Total.js Simple blog
 author                          : Denis Granec
 version                         : 1.0.0
 
-// Mail settings
-mail_smtp                       : smtp.yourwebsite.com
-mail_smtp_options               : {"secure":false,"port":25,"user":"","password":"","timeout":10000}
-mail_address_from               : your@yourwebsite.com
-mail_address_reply              : your@yourwebsite.com
-mail_address_copy               :
+cookie                          : logged
+login                           : admin
+password               (string) : 123456
