@@ -1,12 +1,12 @@
 exports.install = function() {
 
-	ROUTE('GET /                      *Post', view_index);
-	ROUTE('GET /post/{id}/            *Post', view_post);
+	ROUTE('GET /                           *Post', view_index);
+	ROUTE('GET /post/{id}/                 *Post', view_post);
 
-	ROUTE('POST /comment/add/         *Comment', add_comment);
+	ROUTE('POST /comment/add/              *Comment', add_comment);
 
-	ROUTE('GET /login/                ', view_login, ['unauthorized']);
-	ROUTE('POST /login/               *Login --> @login');
+	ROUTE('GET /login/                     ', view_login, ['unauthorized']);
+	ROUTE('POST /login/                    *Login --> @login');
 
 	GROUP(['authorized'], function() {
 		ROUTE('POST /post/add/            *Post --> @insert');
