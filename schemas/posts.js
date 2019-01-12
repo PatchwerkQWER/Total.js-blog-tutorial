@@ -56,7 +56,7 @@ NEWSCHEMA('Post', function(schema) {
 		var nosql = NOSQL('posts');
 
 		model.slug = '{0}-{1}'.format(U.GUID(5), model.title.slug());
-		delete model.created;
+		model.created = F.datetime;
 
 		nosql.modify(model).where('id', model.id).callback(function(err) {
 			if (err) {
